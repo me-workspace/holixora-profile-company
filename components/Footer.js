@@ -12,6 +12,11 @@ export default function Footer() {
             efficiency, visibility, and operational control through AI
             automation and custom software.
           </p>
+          <div className="footer-badges">
+            <span>Hospitality-focused</span>
+            <span>AI automation</span>
+            <span>Custom software</span>
+          </div>
         </div>
 
         <div>
@@ -24,6 +29,11 @@ export default function Footer() {
             <Link href="/contact">Contact</Link>
           </div>
         </div>
+      </div>
+
+      <div className="container footer-bottom">
+        <span>Holixora Digital Technology</span>
+        <span>AI automation and software solutions for hospitality</span>
       </div>
     </footer>
   );
