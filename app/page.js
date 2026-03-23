@@ -41,6 +41,24 @@ const outcomes = [
   'A clearer path to growth',
 ];
 
+const process = [
+  {
+    step: '01',
+    title: 'Understand the operation',
+    body: 'We look at workflows, friction points, reporting gaps, and what is slowing day-to-day execution.',
+  },
+  {
+    step: '02',
+    title: 'Define the right system',
+    body: 'We identify whether the answer is automation, software, hospitality systems, or a phased roadmap.',
+  },
+  {
+    step: '03',
+    title: 'Build for real use',
+    body: 'We design solutions around the way the business actually works so adoption is practical and sustainable.',
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -62,6 +80,12 @@ export default function HomePage() {
                 View Solutions
               </Link>
             </div>
+
+            <div className="hero-trust-row">
+              <span>Hospitality-focused</span>
+              <span>Operational-first</span>
+              <span>Automation + software</span>
+            </div>
           </div>
 
           <div className="hero-card glass-card">
@@ -77,6 +101,25 @@ export default function HomePage() {
             <div className="hero-metric">
               <strong>Business outcomes</strong>
               <span>Less friction, better visibility, stronger control</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-tight-top">
+        <div className="container">
+          <div className="signal-strip glass-card">
+            <div>
+              <p className="signal-label">Positioning</p>
+              <strong>AI automation and smart software for hospitality</strong>
+            </div>
+            <div>
+              <p className="signal-label">Audience</p>
+              <strong>Hotels, F&amp;B, event venues, related service operators</strong>
+            </div>
+            <div>
+              <p className="signal-label">Outcome</p>
+              <strong>Less friction, better visibility, stronger systems</strong>
             </div>
           </div>
         </div>
@@ -112,9 +155,13 @@ export default function HomePage() {
           />
           <div className="card-grid four-up">
             {services.map((service) => (
-              <article key={service.title} className="glass-card service-card">
+              <article key={service.title} className="glass-card service-card service-card-polished">
+                <p className="service-kicker">Service</p>
                 <h3>{service.title}</h3>
                 <p className="muted">{service.body}</p>
+                <Link href="/services" className="text-link">
+                  Learn more
+                </Link>
               </article>
             ))}
           </div>
@@ -154,14 +201,16 @@ export default function HomePage() {
       <section className="section section-tinted">
         <div className="container">
           <SectionIntro
-            eyebrow="Outcomes"
-            title="What better systems make possible"
-            text="A stronger foundation for growth, powered by practical execution."
+            eyebrow="Process"
+            title="How Holixora works"
+            text="A clear process keeps projects practical, focused, and aligned with business reality."
           />
           <div className="card-grid three-up">
-            {outcomes.map((item) => (
-              <article key={item} className="glass-card outcome-card">
-                <h3>{item}</h3>
+            {process.map((item) => (
+              <article key={item.step} className="glass-card process-card">
+                <p className="process-step">{item.step}</p>
+                <h3>{item.title}</h3>
+                <p className="muted">{item.body}</p>
               </article>
             ))}
           </div>
@@ -169,6 +218,23 @@ export default function HomePage() {
       </section>
 
       <section className="section">
+        <div className="container">
+          <SectionIntro
+            eyebrow="Outcomes"
+            title="What better systems make possible"
+            text="A stronger foundation for growth, powered by practical execution."
+          />
+          <div className="card-grid three-up">
+            {outcomes.map((item) => (
+              <article key={item} className="glass-card outcome-card outcome-card-polished">
+                <h3>{item}</h3>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-tinted">
         <div className="container cta-panel">
           <div>
             <p className="eyebrow">Let&apos;s build</p>
