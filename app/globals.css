@@ -105,6 +105,38 @@ main {
   color: var(--text);
 }
 
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav summary {
+  list-style: none;
+  cursor: pointer;
+  color: var(--text);
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.mobile-nav summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-nav-panel {
+  position: absolute;
+  right: 1rem;
+  top: calc(100% + 0.75rem);
+  min-width: 220px;
+  display: grid;
+  gap: 0.85rem;
+  padding: 1rem;
+}
+
+.mobile-nav-panel a {
+  color: var(--muted);
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -359,8 +391,22 @@ p {
 
 .service-card-polished h3,
 .process-card h3,
-.outcome-card-polished h3 {
+.outcome-card-polished h3,
+.info-card h3,
+.service-detail-polished h2 {
   margin-bottom: 0.75rem;
+}
+
+.info-card-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1.5rem;
+}
+
+.info-card,
+.consultation-card {
+  padding: 1.5rem;
 }
 
 .stack-copy > * + * {
@@ -428,6 +474,11 @@ textarea::placeholder {
     display: none;
   }
 
+  .mobile-nav {
+    display: block;
+    position: relative;
+  }
+
   .hero-grid,
   .split-panel,
   .contact-grid,
@@ -437,6 +488,7 @@ textarea::placeholder {
   .three-up,
   .two-up,
   .signal-strip,
+  .info-card-grid,
   .cta-panel {
     grid-template-columns: 1fr;
   }

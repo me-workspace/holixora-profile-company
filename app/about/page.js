@@ -1,4 +1,11 @@
+import Link from 'next/link';
 import SectionIntro from '../../components/SectionIntro';
+
+export const metadata = {
+  title: 'About Us | Holixora Digital Technology',
+  description:
+    'Learn about Holixora, an AI automation and software solutions company focused on hospitality operations.',
+};
 
 const principles = [
   ['Practicality', 'Every solution should solve a real operational problem.'],
@@ -19,6 +26,25 @@ export default function AboutPage() {
             on helping hospitality and related service businesses operate with
             greater clarity, efficiency, and control.
           </p>
+        </div>
+      </section>
+
+      <section className="section section-tight-top">
+        <div className="container">
+          <div className="signal-strip glass-card">
+            <div>
+              <p className="signal-label">Identity</p>
+              <strong>AI automation and software solutions company</strong>
+            </div>
+            <div>
+              <p className="signal-label">Industry focus</p>
+              <strong>Hospitality and related service businesses</strong>
+            </div>
+            <div>
+              <p className="signal-label">Mindset</p>
+              <strong>Practical systems, not technology for its own sake</strong>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -68,6 +94,28 @@ export default function AboutPage() {
                 <p className="muted">{body}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-tinted">
+        <div className="container cta-panel">
+          <div>
+            <p className="eyebrow">Next step</p>
+            <h2>Let&apos;s turn business complexity into clearer systems</h2>
+            <p className="lead muted">
+              If your team is dealing with manual work, fragmented workflows, or
+              weak visibility across operations, Holixora can help define the
+              right system path.
+            </p>
+          </div>
+          <div className="cta-actions">
+            <Link href="/contact" className="button button-primary">
+              Talk to Holixora
+            </Link>
+            <Link href="/services" className="button button-secondary">
+              View Services
+            </Link>
           </div>
         </div>
       </section>

@@ -31,6 +31,20 @@ export default function Header() {
         <Link href="/contact" className="button button-primary header-cta">
           Book a Consultation
         </Link>
+
+        <details className="mobile-nav">
+          <summary>Menu</summary>
+          <div className="mobile-nav-panel glass-card">
+            {navItems.map((item) => (
+              <Link key={item.href} href={item.href}>
+                {item.label}
+              </Link>
+            ))}
+            <Link href="/contact" className="button button-primary wide-button">
+              Book a Consultation
+            </Link>
+          </div>
+        </details>
       </div>
     </header>
   );
